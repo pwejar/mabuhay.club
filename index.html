@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mahuhay.club</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="icon" type="image/svg" href="./assets/logo.png"/>
+    </head>
+    <body>
+        <div class="containeer">
+            <div class="cooleer">
+
+            </div>
+            <div class="backgrounds">
+                <div class="background" style="background-image: url('../assets/background1.jpg');">
+                </div>
+                <div class="background" style="background-image: url('../assets/background2.jpg');">
+                </div>
+                <div class="background" style="background-image: url('../assets/background4.jpeg');">
+                </div>
+            </div>
+            <div class="header">
+                <p class="semiLogo"><span>mabuhay</span><i>.club</i></p>
+                <div class="menu">
+                    <p onclick="loadContent('home')" id="home" class="menuuus">Home</p>|
+                    <p onclick="loadContent('islander')" id="islander" class="menuuus">Islander Bar & Grill</p>|
+                    <p onclick="loadContent('spa')" id="spa" class="menuuus">Spa</p>|
+                    <p onclick="loadContent('boatY')" id="boatY" class="menuuus">Boat & Yacht Pier</p>|
+                    <p onclick="loadContent('ecoCamp')" id="ecoCamp" class="menuuus">Eco camp</p>|
+                    <p class="menuuus">Gallary</p>|
+                    <p onclick="loadContent('foodMenu')" id="foodMenu" class="menuuus">Menu</p>|
+                    <p onclick="loadContent('eventsNews')" id="eventsNews" class="menuuus">News & Events</p>|
+                    <p class="menuuus">Contacts</p>
+                    <svg onclick="loadContent('admin')" onclick="loadContent('admin')" id="admin" class="menuuus"  viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.46189 6.57621C5.30757 6.57621 6.8038 5.10676 6.8038 3.29411C6.8038 1.48146 5.30757 0.0120087 3.46189 0.0120087C1.61621 0.0120087 0.119995 1.48146 0.119995 3.29411C0.119995 5.10676 1.61621 6.57621 3.46189 6.57621Z" class="fillOne"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.2789 2.3655C2.2789 3.0813 2.79329 3.6616 3.42769 3.6616C4.06209 3.6616 4.5764 3.0813 4.5764 2.3655C4.5764 1.6497 4.06209 1.0695 3.42769 1.0695C2.79329 1.0695 2.2789 1.6497 2.2789 2.3655V2.3655Z" class="fillTwo"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42771 3.92911C2.34521 3.92911 1.37362 4.40381 0.709717 5.15641C1.31262 6.01411 2.3204 6.57611 3.4619 6.57611C4.5841 6.57611 5.57711 6.03291 6.18321 5.19971C5.51871 4.42201 4.53071 3.92911 3.42771 3.92911V3.92911Z" class="fillTwo"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="katikati">
+                <div id="homepage"  class="page">
+                    <div class="manythings">
+                        <div class="slidecont">
+                            <svg width="95" height="59" viewBox="0 0 95 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#373435" stroke-width="0.211275" stroke-miterlimit="22.9256"/>
+                            </svg>
+                            <div class="title">
+                                Water sports
+                            </div>
+                        </div>
+                        <div class="news">
+
+                        </div>
+                        <div class="slogan">
+                            ...WHERE LOCALS AND VACATIONERS COME TOGETHER
+                        </div>
+                    </div>
+                    <div class="withlogo">
+                        <img src="./assets/logo.png" alt="">
+                        <div class="menusSlid">
+                            <div class="holders">
+                                <div class="carddd">
+                                    <img src="./menus/mongolia.jpg" alt="">
+                                    <div class="texttt">
+                                        <h4>“Mongolian Hot Pot"</h4>
+                                        <p>On Order only 24 Hours in advance Minimum 2 Pax You cook yourself on the table. Choose from Chicken, Beef, Lamb, Fish Base Soup, with a variety of vegetables, mushrooms and lean Meats.</p>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booknow">
+                            Book Now
+                        </div>
+                    </div>
+                </div>
+                <div id="adminpage" class="page">
+                    <div id="login">
+                        <div class="card">
+                            <img src="./assets/logo.png" alt="">
+                            <div class="inputs">
+                                <label>Email</label>
+                                <input type="email" id="emailID" class=""/>
+                            </div>
+                            <div class="inputs">
+                                <label>Passsword</label>
+                                <input type="password" id="passwordID">
+        
+                            </div>
+                            <div class="button" onclick="loging()">
+                                Login
+                            </div>
+                            <p>forgot password?</p>
+                        </div>
+                    </div>
+                    <div id="admincontent">
+                        <p onclick="signOut()">Logout</p>
+                    </div>
+                </div>
+                <div id="eventsNewspage" class="page">
+                    <div class="newsHead">
+                        <div class="logoTitle">
+                            <img src="./assets/logo.png" alt="">
+                            <p>News & Events</p>
+                        </div>
+                        <div class="socialMedia">
+                            <img src="./assets/facebook-new.png" alt="">
+                            <img src="./assets/twitter.png" alt="">
+                            <img src="./assets/instagram-new.png" alt="">
+                        </div>
+                    </div>
+                    <div id="newsBody">
+                        <div class="carrd">
+                            <div class="text">
+                                <h3 class="title">Title: Lorem ipsum dolor sit amet</h3>
+                                <h4 class="from"><b>from: </b></h4>
+                                <p class="to">to</p>
+                                <div class="imgageDig smallsc">
+                                    <div class="holder">
+                                        <img src="./santa.png" alt="">
+                                        <img src="./assets/background3.jpg" alt="">
+                                        <img src="./santa.png" alt="">
+                                    </div>
+                                </div>
+                                <p class="maneno">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                                <p class="doo">Amount</p>
+                            </div>
+                            <div class="imgageDig bigscrr">
+                                <div class="holder">
+                                    <img src="./santa.png" alt="">
+                                    <img src="./assets/background3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin uploaders">
+                        <div class="events">
+                            <h3>Upload Event</h3>
+                            <div class="chase">
+                                <div class="holders">
+                                    <label>Event Title:</label>
+                                    <input type="text" id="enventTTT">
+                                </div>
+                                <div class="holders">
+                                    <label>Start's</label>
+                                    <input type="date" id="fromDDD" onkeydown="return false" />
+                                    <input type="time" id="fromTTT" />
+                                </div>
+                                <div class="holders">
+                                    <label>End's</label>
+                                    <input type="date" id="toDDD" onkeydown="return false" />
+                                    <input type="time" id="toTTT"/>
+                                </div>
+                                <div class="holders">
+                                    <label>Ticket Cost ksh:</label>
+                                    <input type="number" id="costTTT">
+                                    
+                                </div>
+                            </div>
+                            <div class="chase">
+                                <div class="holders">
+                                    <label>Upload Photos</label>
+                                    <input id="theINput" onchange="showPrev(event)" type="file" name="myImage" accept="image/*" multiple="multiple" >
+                                </div>
+                                <div id="photodisplas" class="holders">
+                                    
+                                </div>
+                                <div class="holders">
+                                    <label>description:</label>
+                                    <textarea id="descripID"></textarea>
+                                </div>
+                                <div class="button" id="updateButon" onclick="uploadEvent()">
+                                    Update Event
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events">
+                            <h3>Upload News</h3>
+                            <div class="chase">
+                                <div class="holders">
+                                    <label>News Title:</label>
+                                    <input type="text" id="newsTTT">
+                                </div>
+                                <div class="holders">
+                                    <label>Upload Photos</label>
+                                    <input id="theINputNews" onchange="showPrev2(event)" type="file" name="myImage" accept="image/*" multiple="multiple" >
+                                </div>
+                                <div id="photodisplasNews" class="holders">
+                                    
+                                </div>
+                            </div>
+                            <div class="chase">
+                                
+                                <div class="holders">
+                                    <label>details:</label>
+                                    <textarea id="detailsIDNews"></textarea>
+                                </div>
+                                <div class="button" id="updateButonNews" onclick="uploadNews()">
+                                    Update News
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menuUpdater">
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="islanderpage"  class="page islanderTemplate">
+                    <div class="kititle">
+                        <div class="textMob">
+                            <div class="kilogo">
+                                <img src="./assets/logo.png" alt="">
+                                <p>Islander Bar & Grill</p>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt adipisci magni eius sunt inventore dignissimos, omnis at qui illo tempore cumque officia cum ea maxime deserunt quasi! Sit quae magni, eveniet magnam qui cum quasi odio deserunt, facere eaque quisquam fugit accusantium in dignissimos consequatur reprehenderit ab. Quo in quod, nihil quibusdam ipsum doloribus? Veniam, nisi necessitatibus. Nobis quia provident, dignissimos consectetur quidem nemo ipsa animi. Commodi pariatur autem consectetur quis omnis, non distinctio! Voluptatibus accusantium amet voluptates placeat alias? Veniam, rem, tempora modi excepturi dolorum dicta aspernatur nam sit, autem cupiditate aliquid optio ipsam fuga esse! Modi quae, ullam neque accusantium eaque consectetur rerum sit blanditiis animi earum amet, nam repellat tenetur eligendi maxime quis? Quibusdam ratione a dignissimos dolorum voluptatum voluptate expedita nisi, itaque pariatur voluptatibus error eveniet aliquid nesciunt qui in nulla sapiente earum voluptatem, magnam nostrum ipsum quia velit beatae obcaecati. Incidunt, qui! Harum dignissimos labore magni nostrum? Aut reprehenderit magni sapiente quam fugiat modi repellat tempore vero cupiditate corporis ex magnam architecto quos, odit laboriosam unde suscipit aliquid, in ab dolores. Accusantium neque laboriosam temporibus quae fugiat, officia nobis aliquam nihil exercitationem fugit delectus ducimus aut quia, maiores voluptate repudiandae dolorem eius accusamus. A.
+                            </div>
+                        </div>
+                        <div class="placephoto" style="background-image: url(./assets/islander/top.jpg);">
+                                
+                        </div>
+                    </div> 
+                    <div class="photos">
+                        <div style="background-image: url(./assets/islander/1.jpg);"></div>
+                        <div style="background-image: url(./assets/islander/2.jpg);"></div>
+                        <div style="background-image: url(./assets/islander/3.jpg);"></div>
+                    </div>             
+                </div>
+                <div id="spapage"  class="page islanderTemplate">
+                    <div class="kititle">
+                        <div class="textMob">
+                            <div class="kilogo">
+                                <img src="./assets/logo.png" alt="">
+                                <p>Spa &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</p>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae porro enim, tenetur quidem nesciunt impedit voluptatem quis minima? Perferendis maiores voluptates ut culpa rerum et, nam eius quia soluta. Officiis, perspiciatis dolorum nemo reiciendis aspernatur error harum incidunt accusantium, adipisci labore odio non obcaecati impedit veritatis ut, sequi laudantium deleniti? Illum deleniti dolorum suscipit odio possimus corrupti fugiat fuga inventore dolorem quas delectus expedita saepe excepturi exercitationem esse hic tempora labore, facilis iste sunt accusantium! Saepe reprehenderit cum, eveniet est reiciendis quis ex expedita? Hic iusto ex cupiditate nostrum error cum culpa tempore enim iste ullam autem, nulla voluptate quisquam nisi quasi excepturi, rerum vel praesentium? Rem quaerat voluptatibus corrupti inventore repudiandae, distinctio, eveniet qui deserunt, consequatur sapiente necessitatibus molestiae tempore ex laboriosam facilis! Libero quaerat aspernatur doloribus corporis sunt illum dolores reiciendis, dicta reprehenderit accusantium vero sequi unde quae amet corrupti natus adipisci magnam nihil debitis possimus provident deserunt! Officia sit, reiciendis quisquam asperiores unde quas facere repudiandae nobis consequatur, officiis sint iusto quam! Nisi ab cumque soluta, maiores error ducimus praesentium saepe optio inventore voluptatibus iste, et enim nostrum dolorum ad illo labore porro at impedit neque nobis corporis rem. Tempora, quia nesciunt in quidem at rem obcaecati!
+                            </div>
+                        </div>
+                        <div class="placephoto" style="background-image: url(./assets/spa/2.jpg);">
+                                
+                        </div>
+                    </div> 
+                    <div class="photos">
+                        <div style="background-image: url(./assets/spa/beds.jpeg);"></div>
+                        <div style="background-image: url(./assets/spa/1.jpg);"></div>
+                        <div style="background-image: url(./assets/spa/4.jpg);"></div>
+                    </div>             
+                </div>
+                <div id="boatYpage"  class="page islanderTemplate">
+                    <div class="kititle">
+                        <div class="textMob">
+                            <div class="kilogo">
+                                <img src="./assets/logo.png" alt="">
+                                <p>Boat Yacht & Pier</p>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla voluptatem architecto provident a sint, aliquam autem voluptate deleniti ipsam numquam quas tempora, magnam dolorem deserunt fugit quaerat voluptatibus consectetur consequatur. Quis nihil qui ducimus aut in, ad esse distinctio totam. Minus quasi nostrum animi maiores! Cum optio doloribus adipisci asperiores iste, rem laboriosam repudiandae, similique aperiam sequi iure consequatur fugit tenetur ducimus maiores ipsam. Eos nobis dolores, a, quaerat quibusdam nostrum nulla cum possimus adipisci harum quisquam ea ipsam, reiciendis quas. Corrupti a rerum dolor deserunt nesciunt quibusdam eos harum suscipit consequatur cum necessitatibus corporis ipsa dolorem ab aliquam praesentium odit sequi quis, magnam voluptatum quas unde ratione! Alias quae molestiae inventore hic ullam, incidunt magnam voluptas velit veniam sunt voluptatum tenetur similique? Molestias eos voluptatum sapiente architecto dolor. Eum illo veniam fuga fugiat rerum, sint sequi nemo quia et minima officiis quibusdam error, ipsam nostrum dolorem ex animi voluptate id iste? Maxime enim vel, necessitatibus assumenda adipisci quos saepe consectetur modi? Minus tenetur, corrupti mollitia aliquid voluptates cupiditate, distinctio illo molestiae officiis culpa adipisci quis itaque nemo repudiandae recusandae possimus blanditiis ab iste quae. Minus facere quasi odit quas voluptatem ipsum sint, quis omnis, tempore mollitia delectus eveniet.
+                            </div>
+                        </div>
+                        <div class="placephoto" style="background-image: url(./assets/boatY/boatyyy.png);">
+                                
+                        </div>
+                    </div> 
+                    <div class="photos">
+                        <div style="background-image: url(./assets/boatY/1.jpeg);"></div>
+                        <div style="background-image: url(./assets/boatY/4.jpeg);"></div>
+                        <div style="background-image: url(./assets/boatY/3.jpeg);"></div>
+                    </div>             
+                </div>
+                <div id="ecoCamppage"  class="page islanderTemplate">
+                    <div class="kititle">
+                        <div class="textMob">
+                            <div class="kilogo">
+                                <img src="./assets/logo.png" alt="">
+                                <p>Eco Camp</p>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe fugiat deleniti a quia debitis quos ad doloremque ipsa facilis totam alias voluptatibus magni hic rerum at error inventore ratione ea ducimus, atque molestias non cumque ullam! Accusamus aliquid quo fuga laudantium obcaecati saepe corrupti quia delectus minima nemo iste veritatis beatae totam, numquam temporibus ex, aspernatur, molestiae sed veniam iure? A est non, molestias beatae exercitationem eveniet natus asperiores voluptas velit error ullam quae porro soluta ipsum maiores voluptate dignissimos quo laboriosam illum! Repellendus odio adipisci porro pariatur at distinctio neque quia provident, eligendi eum fugit temporibus repudiandae nostrum recusandae blanditiis ipsam doloremque, enim sunt molestias iste odit ducimus laudantium est ratione. Quasi, temporibus quaerat quibusdam esse at aliquid corrupti nobis accusamus ad neque consequatur maxime odio architecto deserunt reprehenderit sit impedit eaque inventore ut. Placeat tempore sed maiores possimus autem nulla dolor magnam, sit quia voluptatem quidem accusantium, eos, tenetur earum facere id. Iste, dolor aliquam! Vel libero praesentium perferendis esse ad voluptate, aperiam, ullam quas laborum autem a veniam quo nesciunt ut optio tempora est placeat voluptatum nihil quia sequi? Numquam incidunt odit aliquam, provident quam ratione distinctio aut corporis nam, tenetur consectetur, explicabo ad a aliquid aperiam.
+                            </div>
+                        </div>
+                        <div class="placephoto" style="background-image: url(./assets/eco/7.jpeg);">
+                                
+                        </div>
+                    </div> 
+                    <div class="photos">
+                        <div style="background-image: url(./assets/eco/top.jpeg);"></div>
+                        <div style="background-image: url(./assets/eco/topest.jpeg);"></div>
+                        <div style="background-image: url(./assets/eco/pexels-photo-5065189.jpeg);"></div>
+                    </div>             
+                </div>
+                <div id="foodMenupage"  class="page">
+                    <div class="menussHead">
+                        <div class="logoTitle">
+                            <img src="./assets/logo.png" alt="">
+                            <p>Menu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        </div>
+                        <div class="socialMedia">
+                            <img src="./assets/facebook-new.png" alt="">
+                            <img src="./assets/twitter.png" alt="">
+                            <img src="./assets/instagram-new.png" alt="">
+                        </div>
+                    </div>
+                    <div class="menus" >
+                        <div class="theMenuCont" id="menuContId">
+                            <div class="theMenu" id="houseSpecial">
+                                <h3>House specials</h3>
+                                <div class="cardi">
+                                    <h4>“Mongolian Hot Pot"</h4>
+                                    <div>
+                                        <img src="./menus/mongolia.jpg" alt="">
+                                        <p>On Order only 24 Hours in advance Minimum 2 Pax You cook yourself on the table. Choose from Chicken, Beef, Lamb, Fish Base Soup, with a variety of vegetables, mushrooms and lean Meats.</p>
+                                    </div>
+                                    <p><b>1500 KSH Per Person</b></p>
+                                </div>
+                                <div class="cardi">
+                                    <h4>Tom Yum </h4>
+                                    <div>
+                                        <img src="./menus/tum.jpg" alt="">
+                                        <p>Traditional Thai National Dish 
+                                            Either with Chicken 
+                                            or Seafood accompanied by Rice</p>
+                                    </div>
+                                    <p><b>Ksh 1200</b></p>
+                                </div>
+                            </div>
+                            <div class="theMenu" id="mainaCourse">
+                                <h3>Main Course</h3>
+                                <div >
+                                    <h4>TRADITIONAL FISH & CHIPS</h4>
+                                    <div>
+                                        <p>Tender Fish Fillet in orig.batter 
+                                            with remoulade sauce and crispy fries</p>
+                                    </div>
+                                    <p><b>Ksh 1150</b></p>
+                                </div>
+                                <div>
+                                    <h4>MARIBEL’S SECRET</h4>
+                                    <div>
+                                        <p>Traditional Fillipino Chicken Adobo served 
+                                            with coconut rice</p>
+                                    </div>
+                                    <p><b>Ksh 1250</b></p>
+                                </div>
+                                <div>
+                                    <h4>CHICKEN SATAY </h4>
+                                    <div>
+                                        <p>skewers with mango 
+                                            dip on exotic salad bed</p>
+                                    </div>
+                                    <p><b>Ksh 900</b></p>
+                                </div>
+                                <div>
+                                    <h4>FILETSTEAK "BORACAY" </h4>
+                                    <div>
+                                        <p>300 g with 
+                                            pancit noodles and garden vegetables</p>
+                                    </div>
+                                    <p><b>Ksh 1350</b></p>
+                                </div>
+                                <div>
+                                    <h4>CHICKEN THIKA</h4>
+                                    <div>
+                                        <p> with Jeera Rice 
+                                            and yoghurt dip</p>
+                                    </div>
+                                    <p><b>Ksh 550</b></p>
+                                </div>
+                                <div>
+                                    <h4>MABUHAI MIXED GRILL</h4>
+                                    <div>
+                                        <p>Assortment of Meats Lamb, Beef, Chicken,
+                                            Pork smoke Grilled with Potato Wedges and garden Salad</p>
+                                    </div>
+                                    <p><b>Ksh 1850</b></p>
+                                </div>
+                                <div>
+                                    <h4>BUCKET OF RIBS</h4>
+                                    <div>
+                                        <p>Tender Pork Ribs from the smoke ofen with garlic bread</p>
+                                    </div>
+                                    <p><b>Ksh 1700</b></p>
+                                </div>
+                            </div>
+                            <div class="theMenu" id="veggieCon">
+                                <h3>Vegetarian Corner</h3>
+                                <div >
+                                    <h4>Lime-Curry Tofu Stir-Fry 
+                                        on Jasmine Rice </h4>
+                                    <div>
+                                        <p></p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>Savannah's Best Marinated Portobello 
+                                        Mushroomson Couscous </h4>
+                                    <div>
+                                        <p></p>
+                                    </div>
+                                    <p><b>Ksh 850</b></p>
+                                </div>
+                                <div>
+                                    <h4>Red Lentil Curry
+                                        with Basmati Ric</h4>
+                                    <div>
+                                        <p></p>
+                                    </div>
+                                    <p><b>Ksh 650</b></p>
+                                </div>
+                                
+                            </div>
+                            <div class="theMenu" id="soupsand">
+                                <h3>SOUPS & SIDE SALADS</h3>
+                                <div >
+                                    <h4>SOUP OF THE DAY</h4>
+                                    <div>
+                                        <p>Our chefs daily creation</p>
+                                    </div>
+                                    <p><b>Ksh 550</b></p>
+                                </div>
+                                <div>
+                                    <h4>SEAFOOD GUMBO</h4>
+                                    <div>
+                                        <p>With shrimp, crewfish tails & andouille sausage</p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>MISO SOUP</h4>
+                                    <div>
+                                        <p>With tofu, scallions, and seaweed</p>
+                                    </div>
+                                    <p><b>Ksh 600</b></p>
+                                </div>
+                                <div>
+                                    <h4>TOM YUM </h4>
+                                    <div>
+                                        <p>Thai Fish Soup with coconut</p>
+                                    </div>
+                                    <p><b>Ksh 550</b></p>
+                                </div>
+                                <div>
+                                    <h4>SQUID SALAD</h4>
+                                    <div>
+                                        <p>Marinated Squid</p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>THAI PAPAYA SALAD</h4>
+                                    <div>
+                                        <p>With Cashews and Chicken Stripes</p>
+                                    </div>
+                                    <p><b>Ksh 850</b></p>
+                                </div>
+                               
+                            </div>
+                            <div class="theMenu" id="drinkList">
+                                <h3>Drinks List</h3>
+                                <div >
+                                    <h4>Hot Drinks</h4>
+                                    <div class="drinks">
+                                        <p>Grande Capuccino</p> <p><b>Ksh 270</b></p>
+                                        <p>Latte Machiato</p> <p><b>Ksh 250</b></p>
+                                        <p>Hot Swiss Choclate</p> <p><b>Ksh 250</b></p>
+                                        <p>Herbal Tea</p> <p><b>Ksh 160</b></p>
+                                    </div>
+                                </div>
+                                <div >
+                                    <h4>Soft Drinks </h4>
+                                    <div class="drinks">
+                                        <p>Soda</p> <p><b>Ksh 130</b></p>
+                                        <p>Fresh Juice of the Day</p> <p><b>Ksh 150</b></p>
+                                        <p>Mineral Water    0.5 L </p> <p><b>Ksh 80</b></p>
+                                        <p>Mineral Water    1. L</p> <p><b>Ksh 130</b></p>
+                                    </div>
+                                </div>
+                                <div >
+                                    <h4>Sparkling </h4>
+                                    <div class="drinks">
+                                        <p>Mineral Water    0.5 L </p> <p><b>Ksh 130</b></p>
+                                        <p>Mineral Water    1. L</p> <p><b>Ksh 150</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theMenu" id="alcoholicDr">
+                                <h3>Alcoholic Drinks</h3>
+                                <div >
+                                    <h4>WINES</h4>
+                                    <div class="drinks">
+                                        <p>White wine per glassCulemborg south africa /cape white 
+                                            2019  0.2 l glass</p> <p><b>Ksh 550</b></p>
+                                        <p>Kleine Rust south africa Sauvignon Blanc 2018 0.2 l glass</p> <p><b>Ksh 650</b></p>
+                                        <p>Zapailar Chile Sauvignon Blanc2018 0.2 glass</p> <p><b>Ksh 550</b></p>
+                                        <p>Red WineHouse Wine 0.2 glass</p> <p><b>Ksh 500</b></p>
+                                    </div>
+                                </div>
+                                <div >
+                                    <h4>BEERS</h4>
+                                    <div class="drinks">
+                                        <p>Pilsner          0.5   L</p> <p><b>Ksh 260</b></p>
+                                        <p>Tusker           0.5   L</p> <p><b>Ksh 260</b></p>
+                                        <p>Tusker Malt     0.33 L</p> <p><b>Ksh 220</b></p>
+                                        <p>White Cape     0.5  L</p> <p><b>Ksh 240</b></p>
+                                        <p>guinness          0.5   L</p> <p><b>Ksh 260</b></p>
+                                        <p>House Beer      0.33 L </p> <p><b>Ksh 350</b></p>
+                                    </div>
+                                </div>
+                                <div >
+                                    <h4>SHOTS PER TOT </h4>
+                                    <div class="drinks">
+                                        <p>Olmeca Tequilla</p> <p><b>Ksh 250</b></p>
+                                        <p>Sambuca Molinari</p> <p><b>Ksh 220</b></p>
+                                        <p>Gordon Dry Gin</p> <p><b>Ksh 250</b></p>
+                                        <p>Single Malt Glenfiddich  12 Years</p> <p><b>Ksh 480</b></p>
+                                        <p><span>18 Years</span></p> <p><b>Ksh 650</b></p>
+                                        <p>Singleton     12 Years</p> <p><b>Ksh 380</b></p>
+                                        <p><span>18 Years</span></p> <p><b>Ksh 500</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theMenu" id="cocktailser">
+                                <h3>Cocktail</h3>
+                                <div >
+                                    <h4>SUNSHINE</h4>
+                                    <div>
+                                        <p>Havana club rum, Martini, Pineapple Juice and Grenadine syrup</p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>MAI TAI</h4>
+                                    <div>
+                                        <p>Havana club rum, Pineapple rum, Orange Curacao and lime juice</p>
+                                    </div>
+                                    <p><b>Ksh 850</b></p>
+                                </div>
+                                <div>
+                                    <h4>SEX ON THE BEACH </h4>
+                                    <div>
+                                        <p>Pearch Liquor, Orange Juice, Pineapple Juice, Vodka Cranberry Juice</p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>WHITE LADY </h4>
+                                    <div>
+                                        <p>Dry Gin, Triple sec, Fresh lemon juice and sugercane syrup </p>
+                                    </div>
+                                    <p><b>Ksh 750</b></p>
+                                </div>
+                                <div>
+                                    <h4>COSMOPOLITAN </h4>
+                                    <div>
+                                        <p> Vodka, Triple sec, Cramberry Juice and Lime Juice</p>
+                                    </div>
+                                    <p><b>Ksh 650</b></p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    <div class="menuList" id="theMunuList" >
+                        <div class="holder">
+                            <p class="menuBT" id="ao1" onclick="smoothScroll('houseSpecial')">House specials</p>
+                            <p class="menuBT" id="ao2" onclick="smoothScroll('mainaCourse')">Main Course</p>
+                            <p class="menuBT" id="ao3" onclick="smoothScroll('veggieCon')">Vegetarian Corner</p>
+                            <p class="menuBT" id="ao4" onclick="smoothScroll('soupsand')">SOUPS & SIDE SALADS</p>
+                            <p class="menuBT" id="ao5" onclick="smoothScroll('drinkList')">Drinks List</p>
+                            <p class="menuBT" id="ao6"onclick="smoothScroll('alcoholicDr')">Alcoholic Drinks</p>
+                            <p class="menuBT" id="ao7" onclick="smoothScroll('cocktailser')">Cocktail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foooter">
+                <div class="aboutsss">
+                    <h4>About us</h4>
+                    <p>Mabuhay Islander Bar & Grill, Spa, Boat and Yacht Pier and Eco-lodge is the perfect family holiday chill spot, located within the scenic Kilifi Creek. We are located in Mandharini, along Majajani road, which is 7kms from the Kilifi-Malindi Highway. We have a water front beach bar, restaurant and lounge offering the most unique Asian-western fused cuisines. Our signature meal is the Mongolian Hot Pot whose base soup is basically prepared for 7 hours and served in a special cooking pot where clients choose what to cook and eat from a variety of exotic meat and vegetables. We also have an exclusive Spa with a Jacuzzi and different massage treatments by masseuses from Thailand. Our boat yard and yacht pier provide parking, servicing and repair services of boats. We offer different water sports such as Jet skiing and Kite surfing. Our eco-lodge is located on an island with the most amazing sunset view. Some of the activities available include: birdwatching, camping, kayaking, movies under the stars, romantic bonfire dinners and ocean swimming.  We also offer bookings for meetings, events, weddings, birthdays at very affordable rates. Mabuhay is the place to be if you want to experience an unforgettable mind-blowing experience.   </p>
+                </div>
+                <div class="contactss">
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+    <script src="app.js"></script>
+</html>

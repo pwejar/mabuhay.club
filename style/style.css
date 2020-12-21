@@ -1,0 +1,831 @@
+@charset "UTF-8";
+@font-face {
+  font-family: headers;
+  src: url("./d2.ttf");
+}
+
+@font-face {
+  font-family: logo;
+  src: url("./d3.ttf");
+}
+
+header {
+  padding: 1.5rem 0;
+}
+
+body.auth-false .auth-false {
+  display: block;
+}
+
+body.auth-false .auth-true {
+  display: none;
+}
+
+body.auth-true .auth-false {
+  display: none;
+}
+
+body.auth-true .auth-true {
+  display: block;
+}
+
+[file-drop] {
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.img-preview > div,
+[file-drop-preview] div {
+  display: inline-block;
+  position: relative;
+}
+
+.img-preview img,
+[file-drop-preview] img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+}
+
+.img-preview > div,
+[file-drop-preview] > div {
+  margin: 0.25em;
+}
+
+.img-preview > div:after,
+[file-drop-preview] > div:after {
+  content: 'Click to remove!';
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+  color: #fff;
+  padding: 0.5em;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  font-size: 0.65em;
+}
+
+.img-preview > div:hover:before,
+[file-drop-preview] > div:hover:before {
+  opacity: 0.7;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.img-preview > div:before,
+[file-drop-preview] > div:before {
+  -webkit-transition: all ease 250ms;
+  transition: all ease 250ms;
+  font-size: 1.6em;
+  content: '❌';
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.001);
+          transform: translateX(-50%) translateY(-50%) scale(0.001);
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 55px;
+  opacity: 0;
+}
+
+.solid-border:after {
+  border: 1px dashed #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  content: 'Drop Files Here!';
+  text-align: center;
+  line-height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.containeer {
+  min-height: 100%;
+  z-index: -1;
+}
+
+.containeer .cooleer {
+  z-index: -2;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2e2e2e;
+}
+
+.containeer .backgrounds {
+  z-index: -1;
+  position: fixed;
+  min-height: 100vh;
+  background-color: #100f11;
+}
+
+.containeer .backgrounds .background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out 1s;
+}
+
+.containeer .katikati {
+  min-height: 95vh;
+  position: relative;
+}
+
+.containeer .katikati .page {
+  min-height: 95vh;
+}
+
+.containeer .katikati #homepage {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #homepage img {
+  height: 20vh;
+}
+
+.containeer .katikati #homepage .manythings {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containeer .katikati #homepage .manythings .slogan {
+  font-family: headers;
+}
+
+.containeer .katikati #homepage .withlogo {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containeer .katikati #homepage .withlogo img {
+  margin: 0 auto;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd {
+  background-color: #3d3d50;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #adminpage {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.containeer .katikati #adminpage #login .card {
+  background-color: #ffffffe5;
+  max-width: 300px;
+  margin: auto auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.containeer .katikati #adminpage #login .card img {
+  width: 5vw;
+  margin: 2vh 0 4vh 0;
+}
+
+.containeer .katikati #adminpage #login .card .inputs input {
+  min-height: 45px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 100%;
+  min-width: 100%;
+  border: 1px solid #2b3990;
+}
+
+.containeer .katikati #adminpage #login .card .inputs input:focus {
+  outline: none;
+  border: 2px solid #2b9069;
+}
+
+.containeer .katikati #adminpage #login .card .button {
+  background-color: black;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 45px;
+  min-height: 35px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  -webkit-transition: all ease-in-out .1s;
+  transition: all ease-in-out .1s;
+}
+
+.containeer .katikati #adminpage #login .card .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02) translateY(-10%);
+          transform: scale(1.02) translateY(-10%);
+}
+
+.containeer .katikati #adminpage #login .card p {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.containeer .katikati #adminpage #login .card p:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02) translateY(-10%);
+          transform: scale(1.02) translateY(-10%);
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.containeer .katikati #adminpage #admincontent {
+  text-align: center;
+}
+
+.containeer .katikati #adminpage #admincontent p {
+  padding: 10px;
+  background-color: black;
+  color: orange;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.containeer .katikati .islanderTemplate {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.945)), color-stop(rgba(0, 0, 0, 0.637)), color-stop(rgba(0, 0, 0, 0.877)), color-stop(rgba(0, 0, 0, 0.884)), color-stop(rgba(0, 0, 0, 0.438)), to(rgba(0, 0, 0, 0.253)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.877), rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.253));
+}
+
+.containeer .katikati .islanderTemplate .kititle {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 2fr;
+      grid-template-columns: 4fr 2fr;
+  grid-auto-rows: 1fr;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.containeer .katikati .islanderTemplate .kititle .textMob {
+  padding-left: 5vw;
+}
+
+.containeer .katikati .islanderTemplate .kititle .textMob .kilogo {
+  padding: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+}
+
+.containeer .katikati .islanderTemplate .kititle .textMob .kilogo img {
+  width: 6vw;
+}
+
+.containeer .katikati .islanderTemplate .kititle .textMob .description {
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  color: #07061b;
+}
+
+.containeer .katikati .islanderTemplate .kititle .placephoto {
+  background-position: center;
+  background-size: cover;
+}
+
+.containeer .katikati .islanderTemplate .photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5vh 6vw;
+}
+
+.containeer .katikati .islanderTemplate .photos div {
+  width: 27vw;
+  height: 40vh;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 3px rgba(231, 228, 221, 0.788), 0px -2px 6px rgba(243, 226, 200, 0.541);
+          box-shadow: 0px 2px 3px rgba(231, 228, 221, 0.788), 0px -2px 6px rgba(243, 226, 200, 0.541);
+}
+
+.containeer .katikati #eventsNewspage {
+  display: block;
+}
+
+.containeer .katikati #eventsNewspage .newsHead {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #eventsNewspage .newsHead .logoTitle {
+  padding: 10px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+}
+
+.containeer .katikati #eventsNewspage .newsHead .logoTitle img {
+  width: 50px;
+}
+
+.containeer .katikati #eventsNewspage .newsHead .socialMedia {
+  background-color: #2e3057d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containeer .katikati #eventsNewspage .newsHead .socialMedia img {
+  height: 25px;
+}
+
+.containeer .katikati #eventsNewspage #newsBody {
+  min-height: 90vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(201, 201, 201, 0.459)), color-stop(rgba(190, 190, 190, 0.932)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(201, 201, 201, 0.459), rgba(190, 190, 190, 0.932), rgba(0, 0, 0, 0));
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd {
+  background-color: #BDBFC1;
+  margin-bottom: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .text {
+  text-align: center;
+  padding: 20px 0 0 5vw;
+  background-color: #BDBFC1;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .text .smallsc {
+  display: none;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig .holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig .holder img {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+}
+
+.containeer .katikati #eventsNewspage .uploaders {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(88, 88, 88, 0.705)), color-stop(rgba(80, 80, 80, 0.932)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(88, 88, 88, 0.705), rgba(80, 80, 80, 0.932), rgba(0, 0, 0, 0));
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events {
+  background-color: #ffffffe5;
+  max-width: 600px;
+  margin: 5vh auto;
+  padding: 30px;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events h3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events .holders {
+  margin: 2vh 0;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events .holders input {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #2b3990;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events .holders textarea {
+  outline: none;
+  width: 100%;
+  resize: none;
+  height: 150px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events #photodisplas, .containeer .katikati #eventsNewspage .uploaders .events #photodisplasNews {
+  min-height: 50px;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events #photodisplas img, .containeer .katikati #eventsNewspage .uploaders .events #photodisplasNews img {
+  width: 50px;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events .button {
+  background-color: black;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 45px;
+  min-height: 35px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  -webkit-transition: all ease-in-out .1s;
+  transition: all ease-in-out .1s;
+  text-align: center;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events .button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02) translateY(-10%);
+          transform: scale(1.02) translateY(-10%);
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events p {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.containeer .katikati #eventsNewspage .uploaders .events p:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02) translateY(-10%);
+          transform: scale(1.02) translateY(-10%);
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.containeer .katikati #foodMenupage {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #foodMenupage .menussHead {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #foodMenupage .menussHead .logoTitle {
+  padding: 10px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+}
+
+.containeer .katikati #foodMenupage .menussHead .logoTitle img {
+  width: 50px;
+}
+
+.containeer .katikati #foodMenupage .menussHead .socialMedia {
+  background-color: #2e3057d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.containeer .katikati #foodMenupage .menussHead .socialMedia img {
+  height: 25px;
+}
+
+.containeer .katikati #foodMenupage .menus {
+  background-color: #6b809bf8;
+  padding: 0 2vw 0 7vw;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont {
+  pointer-events: all;
+  text-align: center;
+  width: 100%;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu {
+  margin-bottom: 7vh;
+  margin-top: 2vh;
+  padding: 10px;
+  position: relative;
+  max-width: 1000px;
+  border: 2px solid black;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu h3 {
+  font-family: headers;
+  z-index: 100;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#6b809bf8), color-stop(#6b809bf8), color-stop(#6b809bf8), to(#6b809b00));
+  background-image: linear-gradient(to left, #6b809b00, #6b809bf8, #6b809bf8, #6b809bf8, #6b809b00);
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu p {
+  font-size: smaller;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu div h4 {
+  margin-top: 4vh;
+  margin-top: 2vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#6b809bf8), color-stop(#6b809bf8), color-stop(#6b809bf8), to(#6b809b00));
+  background-image: linear-gradient(to left, #6b809b00, #6b809bf8, #6b809bf8, #6b809bf8, #6b809b00);
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu div .drinks {
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  padding-left: 5vw;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 1vw;
+          column-gap: 1vw;
+  text-align: justify;
+  margin: 2vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div img {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenuFooter {
+  min-height: 25vh;
+}
+
+.containeer .katikati #foodMenupage .menuList {
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.containeer .katikati #foodMenupage .menuList .holder {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  padding: 5vw;
+  font-family: headers;
+  font-size: smaller;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.containeer .katikati #foodMenupage .menuList .holder p {
+  margin: 3vh;
+  padding: 7px;
+  border-radius: 10px 5px 10px 0;
+  border: 2px solid black;
+  background-color: #6b809bf8;
+  cursor: pointer;
+}
+
+.containeer .header {
+  z-index: 1000;
+  padding: 2px 5vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.925);
+  width: 100%;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.containeer .header .semiLogo {
+  color: orange;
+  font-size: larger;
+}
+
+.containeer .header .semiLogo span {
+  font-family: logo;
+  font-size: larger;
+}
+
+.containeer .header .semiLogo i {
+  font-size: smaller;
+}
+
+.containeer .header .menu {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: small;
+}
+
+.containeer .header .menu .notActive {
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.containeer .header .menu .notActive:hover {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  color: black !important;
+}
+
+.containeer .header .menu .active {
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 3px;
+  color: orange;
+  cursor: pointer;
+  background-color: black;
+}
+
+.containeer .header .menu svg {
+  width: 25px;
+}
+
+.containeer .header .menu svg .fillOne {
+  fill: #BDBFC1;
+}
+
+.containeer .header .menu svg .fillTwo {
+  fill: #6B809B;
+}
+
+.containeer .foooter {
+  min-height: 20vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.925);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+  padding: 20vh 5vw;
+}
+
+.containeer .foooter .aboutsss {
+  background-color: #ffffff8c;
+  padding: 2vw;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.containeer .foooter .aboutsss h4 {
+  color: #1111b4;
+}
+
+.containeer .foooter .aboutsss p {
+  margin: 5px;
+}
+/*# sourceMappingURL=style.css.map */
