@@ -1,4 +1,15 @@
 @charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
 @font-face {
   font-family: headers;
   src: url("./d2.ttf");
@@ -115,6 +126,41 @@ body.auth-true .auth-true {
           box-sizing: border-box;
 }
 
+.buttonsGlob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.edit {
+  background-color: #7e2525;
+  color: #f5f5f5;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2vh 5vw;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.edit:hover {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
 .containeer {
   min-height: 100%;
   z-index: -1;
@@ -127,12 +173,14 @@ body.auth-true .auth-true {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   background-color: #2e2e2e;
 }
 
 .containeer .backgrounds {
   z-index: -1;
   position: fixed;
+  max-width: 100vw;
   min-height: 100vh;
   background-color: #100f11;
 }
@@ -141,6 +189,7 @@ body.auth-true .auth-true {
   position: fixed;
   height: 100vh;
   width: 100%;
+  max-width: 100vw;
   background-size: cover;
   background-position: center center;
   -webkit-transition: opacity ease-in-out 1s;
@@ -175,22 +224,189 @@ body.auth-true .auth-true {
   background-image: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
   min-height: 100%;
-  display: -ms-grid;
-  display: grid;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.containeer .katikati #homepage .manythings .meImg {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .meImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .meImg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.containeer .katikati #homepage .manythings .slidecont {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 30vh;
+  width: 100%;
+  position: relative;
+}
+
+.containeer .katikati #homepage .manythings .slidecont #cardFaker {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+}
+
+.containeer .katikati #homepage .manythings .slidecont .cardSLTT {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+}
+
+.containeer .katikati #homepage .manythings .slidecont .cardSLTT svg {
+  width: 40%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont .cardSLTT svg {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont .cardSLTT svg {
+    width: 70%;
+  }
+}
+
+.containeer .katikati #homepage .manythings .slidecont .cardSLTT .title {
+  width: 30%;
+  background-color: #333d49;
+  margin: 10px auto;
+  color: #f5f5f5;
+  padding: 7px;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont .cardSLTT .title {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont .cardSLTT .title {
+    width: 60%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont {
+    margin-top: 5vh;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .slidecont {
+    margin-top: 5vh;
+  }
+}
+
 .containeer .katikati #homepage .manythings .slogan {
   font-family: headers;
+  margin-top: 30px;
+}
+
+.containeer .katikati #homepage .manythings .news {
+  margin-top: 20px;
+  background-color: #bdbfc198;
+  cursor: pointer;
+}
+
+.containeer .katikati #homepage .manythings .news:hover {
+  background-color: #bdbfc1;
+}
+
+.containeer .katikati #homepage .manythings .news #shortNews {
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containeer .katikati #homepage .manythings .news #shortNews .mini {
+  background-color: #6B809B;
+  max-height: 70px;
+  width: 30%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.containeer .katikati #homepage .manythings .news #shortNews .mini .imggg img {
+  height: 60px;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .news #shortNews .mini {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .news #shortNews .mini {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .manythings .news #shortNews {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .manythings .news #shortNews {
+    display: -ms-grid;
+    display: grid;
+  }
 }
 
 .containeer .katikati #homepage .withlogo {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.116)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.116));
   min-height: 100%;
+  max-height: 100vh;
   display: -ms-grid;
   display: grid;
   text-align: center;
@@ -203,12 +419,129 @@ body.auth-true .auth-true {
   margin: 0 auto;
 }
 
-.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd {
-  background-color: #3d3d50;
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .withlogo img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .withlogo img {
+    display: none;
+  }
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid {
+  position: relative;
+  color: #6B809B;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .fullmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -ms-grid;
   display: grid;
+  text-align: center;
+  padding: 10px;
+  background-color: #333d49;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 400;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #000;
+  box-shadow: inset 0px 0px 0px 2px #000;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd {
+  background-color: #333d49;
+  display: -ms-grid;
+  display: grid;
+  text-align: justify;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../menus/mongolia.jpg");
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .img {
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .img {
+    height: 40vh;
+  }
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .texttt {
+  margin: 5px 2vw 5px 5px;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .texttt h3 {
+  font-family: headers;
+  color: #e27900;
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black;
+  font-size: larger;
+  text-align: center;
+}
+
+.containeer .katikati #homepage .withlogo .menusSlid .holders .carddd .texttt h4 {
+  text-align: center;
+  color: #BDBFC1;
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage .withlogo .menusSlid .holders .carddd {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage .withlogo .menusSlid .holders .carddd {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.containeer .katikati #homepage .withlogo .booknow {
+  background-color: #e27900;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #homepage {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #homepage {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .containeer .katikati #adminpage {
@@ -321,7 +654,7 @@ body.auth-true .auth-true {
 }
 
 .containeer .katikati .islanderTemplate .kititle .textMob {
-  padding-left: 5vw;
+  padding: 0 0 0 5vw;
 }
 
 .containeer .katikati .islanderTemplate .kititle .textMob .kilogo {
@@ -337,11 +670,23 @@ body.auth-true .auth-true {
   font-size: 4vw;
   font-weight: bolder;
   color: white;
-  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486), 2px -2px 0 #000, -2px 2px 0 #000, 1px 2px 0 #000;
 }
 
 .containeer .katikati .islanderTemplate .kititle .textMob .kilogo img {
   width: 6vw;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .textMob .kilogo img {
+    width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .textMob .kilogo img {
+    width: 20vw;
+  }
 }
 
 .containeer .katikati .islanderTemplate .kititle .textMob .description {
@@ -351,9 +696,47 @@ body.auth-true .auth-true {
   color: #07061b;
 }
 
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .textMob {
+    padding: 0 5vw 0 5vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .textMob {
+    padding: 0 5vw 0 5vw;
+  }
+}
+
 .containeer .katikati .islanderTemplate .kititle .placephoto {
   background-position: center;
   background-size: cover;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .placephoto {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle .placephoto {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .kititle {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .containeer .katikati .islanderTemplate .photos {
@@ -367,6 +750,7 @@ body.auth-true .auth-true {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5vh 6vw;
+  width: 100%;
 }
 
 .containeer .katikati .islanderTemplate .photos div {
@@ -377,6 +761,47 @@ body.auth-true .auth-true {
   border-radius: 10px;
   -webkit-box-shadow: 0px 2px 3px rgba(231, 228, 221, 0.788), 0px -2px 6px rgba(243, 226, 200, 0.541);
           box-shadow: 0px 2px 3px rgba(231, 228, 221, 0.788), 0px -2px 6px rgba(243, 226, 200, 0.541);
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .photos div {
+    display: -ms-grid;
+    display: grid;
+    width: 90vw;
+    margin: 20px auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .photos div {
+    display: -ms-grid;
+    display: grid;
+    width: 90vw;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati .islanderTemplate .photos {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati .islanderTemplate .photos {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .containeer .katikati #eventsNewspage {
@@ -403,7 +828,7 @@ body.auth-true .auth-true {
   font-size: 4vw;
   font-weight: bolder;
   color: white;
-  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+  text-shadow: 0px 0px 6px orange,  -1px -1px 0 #000,   2px -2px 0 #000, -2px 2px 0 #000, 1px 2px 0 #000;
 }
 
 .containeer .katikati #eventsNewspage .newsHead .logoTitle img {
@@ -421,57 +846,179 @@ body.auth-true .auth-true {
   height: 25px;
 }
 
+.containeer .katikati #eventsNewspage #pictureDisplay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #BDBFC1;
+  z-index: 1001;
+  display: none;
+}
+
+.containeer .katikati #eventsNewspage #pictureDisplay .imgholder2 {
+  background-color: #BDBFC1;
+  min-width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.containeer .katikati #eventsNewspage #pictureDisplay .imgholder2 img {
+  height: 100vh;
+}
+
+.containeer .katikati #eventsNewspage #pictureDisplay .close {
+  z-index: 1020;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  background-color: #BDBFC1;
+  border: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.containeer .katikati #eventsNewspage #pictureDisplay .provius {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  background-color: #BDBFC1;
+  border: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.containeer .katikati #eventsNewspage #pictureDisplay .next {
+  position: absolute;
+  top: 50%;
+  right: 5vw;
+  background-color: #BDBFC1;
+  border: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+
 .containeer .katikati #eventsNewspage #newsBody {
   min-height: 90vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(201, 201, 201, 0.459)), color-stop(rgba(190, 190, 190, 0.932)), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to right, rgba(201, 201, 201, 0.459), rgba(190, 190, 190, 0.932), rgba(0, 0, 0, 0));
+  background-color: #BDBFC1;
+  padding: 10px;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .pleasewait {
+  margin: auto auto;
+  text-align: center;
 }
 
 .containeer .katikati #eventsNewspage #newsBody .carrd {
   background-color: #BDBFC1;
-  margin-bottom: 5px;
+  margin: 0 auto 15px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 2fr;
-      grid-template-columns: 3fr 2fr;
-}
-
-.containeer .katikati #eventsNewspage #newsBody .carrd .text {
+  width: 80%;
+  max-width: 700px;
   text-align: center;
-  padding: 20px 0 0 5vw;
-  background-color: #BDBFC1;
+  padding: 20px 5vw 0 5vw;
+  background-color: #f5f5f5;
+  border-radius: 5px;
 }
 
-.containeer .katikati #eventsNewspage #newsBody .carrd .text .smallsc {
-  display: none;
+.containeer .katikati #eventsNewspage #newsBody .carrd .title {
+  font-size: larger;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
-.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
-  grid-row: 1/6;
+.containeer .katikati #eventsNewspage #newsBody .carrd .from, .containeer .katikati #eventsNewspage #newsBody .carrd .to {
+  font-size: smaller;
+  color: #757575;
 }
 
-.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig .holder {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+.containeer .katikati #eventsNewspage #newsBody .carrd .smallsc .holder {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.containeer .katikati #eventsNewspage #newsBody .carrd .imgageDig .holder img {
+.containeer .katikati #eventsNewspage #newsBody .carrd .smallsc .holder .imgholder {
+  width: 20%;
+  margin: 5px;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .smallsc .holder .imgholder img {
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 40px;
+  margin: 5px;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .doo {
+  background-color: #dbb610;
+  color: #1f0a0a;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 2vh auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .doo:hover {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .free {
+  background-color: #c7c700;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 5px;
+  margin: 2vh auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .free:hover {
+  background-color: #d3d325;
+  color: #000000;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.containeer .katikati #eventsNewspage #newsBody .carrd .maneno {
+  text-align: justify;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #eventsNewspage #newsBody .carrd {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #eventsNewspage #newsBody .carrd {
+    width: 90%;
+  }
 }
 
 .containeer .katikati #eventsNewspage .uploaders {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(88, 88, 88, 0.705)), color-stop(rgba(80, 80, 80, 0.932)), to(rgba(0, 0, 0, 0)));
-  background-image: linear-gradient(to right, rgba(88, 88, 88, 0.705), rgba(80, 80, 80, 0.932), rgba(0, 0, 0, 0));
+  background-color: #BDBFC1;
+  display: none;
 }
 
 .containeer .katikati #eventsNewspage .uploaders .events {
@@ -491,6 +1038,22 @@ body.auth-true .auth-true {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #eventsNewspage .uploaders .events h3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #eventsNewspage .uploaders .events h3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
 }
 
 .containeer .katikati #eventsNewspage .uploaders .events .holders {
@@ -567,6 +1130,20 @@ body.auth-true .auth-true {
   text-decoration: underline;
 }
 
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .katikati #eventsNewspage .uploaders .events {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .katikati #eventsNewspage .uploaders .events {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .containeer .katikati #foodMenupage {
   text-align: center;
   display: -ms-grid;
@@ -598,7 +1175,7 @@ body.auth-true .auth-true {
   font-size: 4vw;
   font-weight: bolder;
   color: white;
-  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486);
+  text-shadow: 0px 0px 6px orange, 0px 0px 35px rgba(121, 72, 0, 0.842), 0px 0px 50px rgba(255, 177, 32, 0.486), 0px 0px 55px rgba(255, 174, 0, 0.486), 2px -2px 0 #000, -2px 2px 0 #000, 1px 2px 0 #000;
 }
 
 .containeer .katikati #foodMenupage .menussHead .logoTitle img {
@@ -617,7 +1194,7 @@ body.auth-true .auth-true {
 }
 
 .containeer .katikati #foodMenupage .menus {
-  background-color: #6b809bf8;
+  background-color: #BDBFC1;
   padding: 0 2vw 0 7vw;
 }
 
@@ -634,6 +1211,7 @@ body.auth-true .auth-true {
   position: relative;
   max-width: 1000px;
   border: 2px solid black;
+  background-color: #f5f5f5;
 }
 
 .containeer .katikati #foodMenupage .menus .theMenuCont .theMenu h3 {
@@ -641,9 +1219,9 @@ body.auth-true .auth-true {
   z-index: 100;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#6b809bf8), color-stop(#6b809bf8), color-stop(#6b809bf8), to(#6b809b00));
-  background-image: linear-gradient(to left, #6b809b00, #6b809bf8, #6b809bf8, #6b809bf8, #6b809b00);
+  top: 40px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#f5f5f5), color-stop(#f5f5f5), color-stop(#f5f5f5), to(#6b809b00));
+  background-image: linear-gradient(to left, #6b809b00, #f5f5f5, #f5f5f5, #f5f5f5, #6b809b00);
 }
 
 .containeer .katikati #foodMenupage .menus .theMenuCont .theMenu p {
@@ -655,9 +1233,9 @@ body.auth-true .auth-true {
   margin-top: 2vh;
   position: -webkit-sticky;
   position: sticky;
-  top: 20px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#6b809bf8), color-stop(#6b809bf8), color-stop(#6b809bf8), to(#6b809b00));
-  background-image: linear-gradient(to left, #6b809b00, #6b809bf8, #6b809bf8, #6b809bf8, #6b809b00);
+  top: 70px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#6b809b00), color-stop(#f5f5f5), color-stop(#f5f5f5), color-stop(#f5f5f5), to(#6b809b00));
+  background-image: linear-gradient(to left, #6b809b00, #f5f5f5, #f5f5f5, #f5f5f5, #6b809b00);
 }
 
 .containeer .katikati #foodMenupage .menus .theMenuCont .theMenu div .drinks {
@@ -669,30 +1247,52 @@ body.auth-true .auth-true {
   padding-left: 5vw;
 }
 
-.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 1vw;
-          column-gap: 1vw;
-  text-align: justify;
-  margin: 2vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu div img {
+  width: 20%;
 }
 
-@media only screen and (max-width: 768px) {
-  .containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .buttons {
+  background-color: #333d49;
+  color: #bdbfc1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi div img {
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .buttons:hover {
+  background-color: #000000;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi {
+  position: relative;
+  cursor: pointer;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi .imageHoldersss {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  z-index: 200;
+  -webkit-transform: translateY(95%);
+          transform: translateY(95%);
+  background-color: white;
+  padding: 7px;
+  pointer-events: none;
+  border: 2px solid white;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi .imageHoldersss img {
   width: 100%;
-  max-width: 1000px;
+}
+
+.containeer .katikati #foodMenupage .menus .theMenuCont .theMenu .cardi:hover .imageHoldersss {
+  display: block;
 }
 
 .containeer .katikati #foodMenupage .menus .theMenuCont .theMenuFooter {
@@ -706,7 +1306,7 @@ body.auth-true .auth-true {
 .containeer .katikati #foodMenupage .menuList .holder {
   position: -webkit-sticky;
   position: sticky;
-  top: 60px;
+  top: 10px;
   padding: 5vw;
   font-family: headers;
   font-size: smaller;
@@ -716,12 +1316,183 @@ body.auth-true .auth-true {
 }
 
 .containeer .katikati #foodMenupage .menuList .holder p {
-  margin: 3vh;
+  margin: 1.5vh;
   padding: 7px;
   border-radius: 10px 5px 10px 0;
   border: 2px solid black;
-  background-color: #6b809bf8;
+  background-color: #BDBFC1;
   cursor: pointer;
+}
+
+.containeer .katikati #checkOutpage {
+  background-color: #bdbfc13a;
+  padding: 5vw;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.containeer .katikati #checkOutpage .holda .itemo0 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 4fr 3fr 60px 2fr 2fr;
+      grid-template-columns: 20px 4fr 3fr 60px 2fr 2fr;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.containeer .katikati #checkOutpage .holda #itemssl {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.containeer .katikati #checkOutpage .holda #itemssl .itemo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 4fr 3fr 60px 2fr 2fr;
+      grid-template-columns: 20px 4fr 3fr 60px 2fr 2fr;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  margin-top: 10px;
+}
+
+.containeer .katikati #checkOutpage .holda #itemssl .itemo img {
+  width: 20px;
+}
+
+.containeer .katikati #checkOutpage .holda #itemssl .itemo input {
+  width: 60px;
+}
+
+.containeer .katikati #checkOutpage .holda #lissTotal {
+  max-width: 700px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  margin: 0 auto;
+  padding: 7px 5vw;
+}
+
+.containeer .katikati #checkOutpage .holda .mpesaform {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  padding: 7px;
+}
+
+.containeer .katikati #checkOutpage .holda .mpesaform .card .inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+}
+
+.containeer .katikati #checkOutpage .holda .mpesaform .card .inputs img {
+  width: 40%;
+  margin: auto auto;
+}
+
+.containeer .katikati #checkOutpage .holda .mpesaform .card .inputs input {
+  min-height: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 100%;
+  min-width: 100%;
+  border: 1px solid #2b3990;
+}
+
+.containeer .katikati #checkOutpage .holda .mpesaform .card .inputs input:focus {
+  outline: none;
+  border: 2px solid #2b9069;
+}
+
+.containeer .katikati #bookingspage {
+  background-color: #bdbfc13a;
+  padding: 5vw;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  padding: 17px;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bolder;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .img img {
+  width: 10%;
+  margin: 7px auto;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3fr;
+      grid-template-columns: 2fr 3fr;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .inputs img {
+  width: 40%;
+  margin: auto auto;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .inputs input {
+  min-height: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 100%;
+  min-width: 100%;
+  border: 1px solid #2b3990;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .inputs input:focus {
+  outline: none;
+  border: 2px solid #2b9069;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .buttons {
+  margin: 5px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px;
+  background-color: #000;
+  color: #bdbfc1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.containeer .katikati #bookingspage .holda .mpesaform .card .buttons:hover {
+  background-color: #333d49;
 }
 
 .containeer .header {
@@ -733,12 +1504,12 @@ body.auth-true .auth-true {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.925);
+  background-color: rgba(36, 35, 43, 0.993);
   width: 100%;
-  height: 50px;
+  max-width: 100vw;
+  height: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -767,7 +1538,6 @@ body.auth-true .auth-true {
   color: white;
   padding: 5px;
   text-align: center;
-  font-size: small;
 }
 
 .containeer .header .menu .notActive {
@@ -803,21 +1573,33 @@ body.auth-true .auth-true {
   fill: #6B809B;
 }
 
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .header {
+    display: none;
+  }
+}
+
 .containeer .foooter {
+  border-top: 2px solid white;
   min-height: 20vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.925);
+  background-color: #2e3057d2;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
-  padding: 20vh 5vw;
 }
 
 .containeer .foooter .aboutsss {
-  background-color: #ffffff8c;
-  padding: 2vw;
-  border-radius: 5px;
+  background-color: #f5f5f5;
+  padding: 3vw 1vw 2vw 7vw;
+  margin: 5vh 0 5vh 0;
   text-align: justify;
 }
 
@@ -827,5 +1609,78 @@ body.auth-true .auth-true {
 
 .containeer .foooter .aboutsss p {
   margin: 5px;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer .foooter {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer .foooter {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.containeer #phonemenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 15vh 7vw;
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  display: none;
+}
+
+.containeer #phonemenu #clicker {
+  pointer-events: all;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  overflow: visible;
+}
+
+.containeer #phonemenu #clicker path {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.containeer #phonemenu #stickOut {
+  pointer-events: all;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.containeer #phonemenu #stickOut p {
+  width: 80%;
+  background-color: #b8b8b8;
+  padding: 7px;
+  text-align: center;
+  border: 2px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) and (min-width: 300px) {
+  .containeer #phonemenu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .containeer #phonemenu {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

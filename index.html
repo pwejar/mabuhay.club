@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script type="text/javascript">
+            (function () {
+                var protocol = location.href.substr(0, location.href.indexOf("://"));
+                var restOfUrl = location.href.substr(location.href.indexOf("://") + "://".length);
+                if (restOfUrl.match(/\/\//)) {
+                    location.href = protocol + "://" + restOfUrl.replace(/\/\//g, "/");
+                }
+            })();
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>mahuhay.club</title>
@@ -13,11 +22,11 @@
 
             </div>
             <div class="backgrounds">
-                <div class="background" style="background-image: url('../assets/background1.jpg');">
+                <div class="background" style="background-image: url('./assets/background1.jpg');">
                 </div>
-                <div class="background" style="background-image: url('../assets/background2.jpg');">
+                <div class="background" style="background-image: url('./assets/beachbar_thumb.jpg');">
                 </div>
-                <div class="background" style="background-image: url('../assets/background4.jpeg');">
+                <div class="background" style="background-image: url('./assets/background4.jpg');">
                 </div>
             </div>
             <div class="header">
@@ -26,13 +35,15 @@
                     <p onclick="loadContent('home')" id="home" class="menuuus">Home</p>|
                     <p onclick="loadContent('islander')" id="islander" class="menuuus">Islander Bar & Grill</p>|
                     <p onclick="loadContent('spa')" id="spa" class="menuuus">Spa</p>|
-                    <p onclick="loadContent('boatY')" id="boatY" class="menuuus">Boat & Yacht Pier</p>|
-                    <p onclick="loadContent('ecoCamp')" id="ecoCamp" class="menuuus">Eco camp</p>|
-                    <p class="menuuus">Gallary</p>|
-                    <p onclick="loadContent('foodMenu')" id="foodMenu" class="menuuus">Menu</p>|
+                    <!-- <p onclick="loadContent('boatY')" id="boatY" class="menuuus">Boat & Yacht Pier</p>|
+                    <p onclick="loadContent('ecoCamp')" id="ecoCamp" class="menuuus">Eco camp</p>| -->
+                    <!-- <p class="menuuus">Gallary</p>| -->
+                    <p onclick="loadContent('foodMenu')" id="foodMenu" class="menuuus">Food</p>|
+                    <p onclick="loadContent('bookings')" id="bookings" class="menuuus">Bookings</p>|
                     <p onclick="loadContent('eventsNews')" id="eventsNews" class="menuuus">News & Events</p>|
-                    <p class="menuuus">Contacts</p>
-                    <svg onclick="loadContent('admin')" onclick="loadContent('admin')" id="admin" class="menuuus"  viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p  class="menuuus" >Contacts</p>
+                    <div onclick="loadContent('checkOut')"  id="checkOut" class="menuuus">Check Out</div>
+                    <svg onclick="loadContent('admin')" id="admin" class="menuuus"  viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.46189 6.57621C5.30757 6.57621 6.8038 5.10676 6.8038 3.29411C6.8038 1.48146 5.30757 0.0120087 3.46189 0.0120087C1.61621 0.0120087 0.119995 1.48146 0.119995 3.29411C0.119995 5.10676 1.61621 6.57621 3.46189 6.57621Z" class="fillOne"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.2789 2.3655C2.2789 3.0813 2.79329 3.6616 3.42769 3.6616C4.06209 3.6616 4.5764 3.0813 4.5764 2.3655C4.5764 1.6497 4.06209 1.0695 3.42769 1.0695C2.79329 1.0695 2.2789 1.6497 2.2789 2.3655V2.3655Z" class="fillTwo"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42771 3.92911C2.34521 3.92911 1.37362 4.40381 0.709717 5.15641C1.31262 6.01411 2.3204 6.57611 3.4619 6.57611C4.5841 6.57611 5.57711 6.03291 6.18321 5.19971C5.51871 4.42201 4.53071 3.92911 3.42771 3.92911V3.92911Z" class="fillTwo"/>
@@ -42,16 +53,84 @@
             <div class="katikati">
                 <div id="homepage"  class="page">
                     <div class="manythings">
+                        <div class="meImg">
+                            <img src="/assets/logo.png" alt="">
+                        </div>
                         <div class="slidecont">
-                            <svg width="95" height="59" viewBox="0 0 95 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#373435" stroke-width="0.211275" stroke-miterlimit="22.9256"/>
-                            </svg>
-                            <div class="title">
-                                Water sports
+                            <div id="cardFaker" class="cardSLTT">
+                                <svg  viewBox="0 0 95 59"  xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                                          <image href="./assets/slides/grill.jpeg" x="0" y="0" width="100"  />
+                                        </pattern>
+                                      </defs>
+                                    <path fill="none" d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#fff" stroke-width="0.611275" stroke-miterlimit="22.9256"/>
+                                </svg>
+                                <div class="title">
+                                    Water sports
+                                </div>
+                            </div>
+                            <div class="cardSL cardSLTT">
+                                <svg  viewBox="0 0 95 59"  fill="url(./assets/background3.jpg)" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
+                                          <image href="./assets/slides/watersport.jpeg" x="0" y="0" width="100"  />
+                                        </pattern>
+                                      </defs>
+                                    <path fill="url(#img2)" d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#fff" stroke-width="0.611275" stroke-miterlimit="22.9256"/>
+                                </svg>
+                                <div class="title">
+                                    Water sports
+                                </div>
+                            </div>
+                            <div class="cardSL cardSLTT">
+                                <svg  viewBox="0 0 95 59"  fill="url(./assets/background3.jpg)" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="img3" patternUnits="userSpaceOnUse" width="100" height="100">
+                                          <image href="./assets/slides/grill.jpeg" x="0" y="0" width="100"  />
+                                        </pattern>
+                                      </defs>
+                                    <path fill="url(#img3)" d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#fff" stroke-width="0.611275" stroke-miterlimit="22.9256"/>
+                                </svg>
+                                <div class="title">
+                                    Islander Bar & Grill
+                                </div>
+                            </div>
+                            <div class="cardSL cardSLTT">
+                                <svg  viewBox="0 0 95 59"  fill="url(./assets/background3.jpg)" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
+                                          <image href="./assets/spa/beds.jpeg" x="0" y="0" width="100"  />
+                                        </pattern>
+                                      </defs>
+                                    <path fill="url(#img4)" d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#fff" stroke-width="0.611275" stroke-miterlimit="22.9256"/>
+                                </svg>
+                                <div class="title">
+                                    spa
+                                </div>
+                            </div>
+                            <div class="cardSL cardSLTT">
+                                <svg  viewBox="0 0 95 59"  fill="url(./assets/background3.jpg)" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="img5" patternUnits="userSpaceOnUse" width="100" height="100">
+                                          <image href="./assets/boatY/boatyyy.png" x="0" y="0" width="100"  />
+                                        </pattern>
+                                      </defs>
+                                    <path fill="url(#img5)" d="M94.5879 1.0175H8.501L1.04202 58.2679H87.129L94.5879 1.0175Z" stroke="#fff" stroke-width="0.611275" stroke-miterlimit="22.9256"/>
+                                </svg>
+                                <div class="title">
+                                    Boat & Yacht Pier
+                                </div>
                             </div>
                         </div>
-                        <div class="news">
+                        <div class="news" onclick="loadContent('eventsNews')">
+                            <h3>News and Events</h3>
+                            <div id="shortNews">
 
+                            </div>
+                            <div class="moreNews">
+                                More News >>>
+                            </div>
                         </div>
                         <div class="slogan">
                             ...WHERE LOCALS AND VACATIONERS COME TOGETHER
@@ -60,17 +139,23 @@
                     <div class="withlogo">
                         <img src="./assets/logo.png" alt="">
                         <div class="menusSlid">
+                            <div class="fullmenu" onclick="loadContent('foodMenu')">
+                                <p>go<br> to<br>food<br>menu</p>
+                            </div>
                             <div class="holders">
                                 <div class="carddd">
-                                    <img src="./menus/mongolia.jpg" alt="">
+                                    <div class="img">
+
+                                    </div>
                                     <div class="texttt">
+                                        <h3>House specials</h3>
                                         <h4>“Mongolian Hot Pot"</h4>
                                         <p>On Order only 24 Hours in advance Minimum 2 Pax You cook yourself on the table. Choose from Chicken, Beef, Lamb, Fish Base Soup, with a variety of vegetables, mushrooms and lean Meats.</p>    
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="booknow">
+                        <div class="booknow" onclick="loadContent('bookings')">
                             Book Now
                         </div>
                     </div>
@@ -110,31 +195,15 @@
                             <img src="./assets/instagram-new.png" alt="">
                         </div>
                     </div>
+                    <div id="pictureDisplay">
+                        
+                    </div>
                     <div id="newsBody">
-                        <div class="carrd">
-                            <div class="text">
-                                <h3 class="title">Title: Lorem ipsum dolor sit amet</h3>
-                                <h4 class="from"><b>from: </b></h4>
-                                <p class="to">to</p>
-                                <div class="imgageDig smallsc">
-                                    <div class="holder">
-                                        <img src="./santa.png" alt="">
-                                        <img src="./assets/background3.jpg" alt="">
-                                        <img src="./santa.png" alt="">
-                                    </div>
-                                </div>
-                                <p class="maneno">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                                <p class="doo">Amount</p>
-                            </div>
-                            <div class="imgageDig bigscrr">
-                                <div class="holder">
-                                    <img src="./santa.png" alt="">
-                                    <img src="./assets/background3.jpg" alt="">
-                                </div>
-                            </div>
+                        <div class="pleasewait">
+                            Loading Please wait.. 
                         </div>
                     </div>
-                    <div class="admin uploaders">
+                    <div id="loadd" class="admin uploaders">
                         <div class="events">
                             <h3>Upload Event</h3>
                             <div class="chase">
@@ -161,7 +230,7 @@
                             <div class="chase">
                                 <div class="holders">
                                     <label>Upload Photos</label>
-                                    <input id="theINput" onchange="showPrev(event)" type="file" name="myImage" accept="image/*" multiple="multiple" >
+                                    <input id="theINput" onchange="showPrev(event,'photodisplas',1)" type="file" name="myImage" accept="image/*" multiple="multiple" >
                                 </div>
                                 <div id="photodisplas" class="holders">
                                     
@@ -170,12 +239,15 @@
                                     <label>description:</label>
                                     <textarea id="descripID"></textarea>
                                 </div>
+                                <div class="button" onclick="resetEvent()">
+                                    Cancle
+                                </div>
                                 <div class="button" id="updateButon" onclick="uploadEvent()">
                                     Update Event
                                 </div>
                             </div>
                         </div>
-                        <div class="events">
+                        <div class="events" id="newss543">
                             <h3>Upload News</h3>
                             <div class="chase">
                                 <div class="holders">
@@ -184,7 +256,7 @@
                                 </div>
                                 <div class="holders">
                                     <label>Upload Photos</label>
-                                    <input id="theINputNews" onchange="showPrev2(event)" type="file" name="myImage" accept="image/*" multiple="multiple" >
+                                    <input id="theINputNews" onchange="showPrev(event,'photodisplasNews',2)" type="file" name="myImage" accept="image/*" multiple="multiple" >
                                 </div>
                                 <div id="photodisplasNews" class="holders">
                                     
@@ -236,7 +308,17 @@
                                 <p>Spa &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</p>
                             </div>
                             <div class="description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae porro enim, tenetur quidem nesciunt impedit voluptatem quis minima? Perferendis maiores voluptates ut culpa rerum et, nam eius quia soluta. Officiis, perspiciatis dolorum nemo reiciendis aspernatur error harum incidunt accusantium, adipisci labore odio non obcaecati impedit veritatis ut, sequi laudantium deleniti? Illum deleniti dolorum suscipit odio possimus corrupti fugiat fuga inventore dolorem quas delectus expedita saepe excepturi exercitationem esse hic tempora labore, facilis iste sunt accusantium! Saepe reprehenderit cum, eveniet est reiciendis quis ex expedita? Hic iusto ex cupiditate nostrum error cum culpa tempore enim iste ullam autem, nulla voluptate quisquam nisi quasi excepturi, rerum vel praesentium? Rem quaerat voluptatibus corrupti inventore repudiandae, distinctio, eveniet qui deserunt, consequatur sapiente necessitatibus molestiae tempore ex laboriosam facilis! Libero quaerat aspernatur doloribus corporis sunt illum dolores reiciendis, dicta reprehenderit accusantium vero sequi unde quae amet corrupti natus adipisci magnam nihil debitis possimus provident deserunt! Officia sit, reiciendis quisquam asperiores unde quas facere repudiandae nobis consequatur, officiis sint iusto quam! Nisi ab cumque soluta, maiores error ducimus praesentium saepe optio inventore voluptatibus iste, et enim nostrum dolorum ad illo labore porro at impedit neque nobis corporis rem. Tempora, quia nesciunt in quidem at rem obcaecati!
+                                We have an international spa and center for wellness offering various menus. Our goal is for our clients to receive services that match value for their money and most importantly in great shape both mentally and physically. Our spa menu is very unique and is inspired by the immense health benefits accrued to the therapy sessions. We have professionally trained and highly experienced masseuses from Thailand who will make your sessions worthwhile. Included in our spa menu is the 
+                                    •	Hot stone massage
+                                    •	 Original Bamboo massage from Bali
+                                    •	 Different reflex massage
+                                    •	 Pre-booked international hairdresser
+                                    •	Meditation programs
+                                    •	Yoga training
+                                    •	Pedicure and Manicure
+                                    •	Jacuzzi, Sauna and Steam bath.
+                                    Upon arrival of guests, we have a very comfortable waiting room where guests are served with green / herbal tea as they await services. Clients can access a private steam bath, sauna and jacuzzi where they can relax off. We have a beach lounge area where clients can enjoy healthy meals and drinks with an attractive ocean view. Our assurance is that clients leave the spa in better conditions than they came in.
+
                             </div>
                         </div>
                         <div class="placephoto" style="background-image: url(./assets/spa/2.jpg);">
@@ -458,9 +540,15 @@
                                 </div>
                                
                             </div>
+                            <div class="theMenu" id="childMen">
+
+                            </div>
+                            <div class="theMenu" id="Desserts">
+                                
+                            </div>
                             <div class="theMenu" id="drinkList">
                                 <h3>Drinks List</h3>
-                                <div >
+                                <div id="hotDrinks" >
                                     <h4>Hot Drinks</h4>
                                     <div class="drinks">
                                         <p>Grande Capuccino</p> <p><b>Ksh 270</b></p>
@@ -469,8 +557,8 @@
                                         <p>Herbal Tea</p> <p><b>Ksh 160</b></p>
                                     </div>
                                 </div>
-                                <div >
-                                    <h4>Soft Drinks </h4>
+                                <div id="softDrinks" >
+                                    <h4>Soft Drinks</h4>
                                     <div class="drinks">
                                         <p>Soda</p> <p><b>Ksh 130</b></p>
                                         <p>Fresh Juice of the Day</p> <p><b>Ksh 150</b></p>
@@ -478,7 +566,7 @@
                                         <p>Mineral Water    1. L</p> <p><b>Ksh 130</b></p>
                                     </div>
                                 </div>
-                                <div >
+                                <div id="Sparkling" >
                                     <h4>Sparkling </h4>
                                     <div class="drinks">
                                         <p>Mineral Water    0.5 L </p> <p><b>Ksh 130</b></p>
@@ -488,7 +576,7 @@
                             </div>
                             <div class="theMenu" id="alcoholicDr">
                                 <h3>Alcoholic Drinks</h3>
-                                <div >
+                                <div id="wines">
                                     <h4>WINES</h4>
                                     <div class="drinks">
                                         <p>White wine per glassCulemborg south africa /cape white 
@@ -498,7 +586,7 @@
                                         <p>Red WineHouse Wine 0.2 glass</p> <p><b>Ksh 500</b></p>
                                     </div>
                                 </div>
-                                <div >
+                                <div id="beers" >
                                     <h4>BEERS</h4>
                                     <div class="drinks">
                                         <p>Pilsner          0.5   L</p> <p><b>Ksh 260</b></p>
@@ -509,7 +597,7 @@
                                         <p>House Beer      0.33 L </p> <p><b>Ksh 350</b></p>
                                     </div>
                                 </div>
-                                <div >
+                                <div id="shots">
                                     <h4>SHOTS PER TOT </h4>
                                     <div class="drinks">
                                         <p>Olmeca Tequilla</p> <p><b>Ksh 250</b></p>
@@ -560,21 +648,157 @@
                                     <p><b>Ksh 650</b></p>
                                 </div>
                             </div>
+                            <div class="theMenu admin" id="menuadmin">
+                                <h3>Menu Updater</h3>
+                                <div class="inputs">
+                                    <label>Category</label>
+                                    <select id="categoryFoodMenu">
+                                        <option></option>
+                                        <option>House Specials</option>
+                                        <option>Main Course</option>
+                                        <option>Vegetarian Corner</option>
+                                        <option>Soups & Side Salads</option>
+                                        <option>Children Menu</option>
+                                        <option>Desserts</option>
+                                        <option>Drinks List</option>
+                                        <option>Alcoholic Drinks</option>
+                                        <option>Cocktail</option>
+                                    </select>
+                                </div>
+                                <div class="inputs">
+                                    <label>Name</label>
+                                    <input type="text" id="nameFoodMenu">
+                                </div>
+                                <div class="inputs">
+                                    <label>Details</label>
+                                    <input type="text" id="detailsFoodMenu">
+                                </div>
+                                <div class="inputs">
+                                    <label>Price</label>
+                                    <input type="number" min="1" id="priceFoodMenu">
+                                </div>
+                                <div class="inputs">
+                                    <label>Picture</label>
+                                    <input id="previeFoodMenu" onchange="showPrev(event,'previewFoodMenu',3)" type="file" name="myImage" accept="image/*">
+                                </div>
+                                <div id="previewFoodMenu">
+
+                                </div>
+                                <div class="buttons" onclick="addtoFoodMenu()">
+                                    Update Menu
+                                </div>
+                            </div>
                            
                         </div>
                         
                     </div>
                     <div class="menuList" id="theMunuList" >
                         <div class="holder">
-                            <p class="menuBT" id="ao1" onclick="smoothScroll('houseSpecial')">House specials</p>
-                            <p class="menuBT" id="ao2" onclick="smoothScroll('mainaCourse')">Main Course</p>
-                            <p class="menuBT" id="ao3" onclick="smoothScroll('veggieCon')">Vegetarian Corner</p>
-                            <p class="menuBT" id="ao4" onclick="smoothScroll('soupsand')">SOUPS & SIDE SALADS</p>
-                            <p class="menuBT" id="ao5" onclick="smoothScroll('drinkList')">Drinks List</p>
-                            <p class="menuBT" id="ao6"onclick="smoothScroll('alcoholicDr')">Alcoholic Drinks</p>
-                            <p class="menuBT" id="ao7" onclick="smoothScroll('cocktailser')">Cocktail</p>
+                            <p class="menuBT" id="ao1" onclick="smoothScroll('houseSpecial',300,1)">House specials</p>
+                            <p class="menuBT" id="ao2" onclick="smoothScroll('mainaCourse',300,2)">Main Course</p>
+                            <p class="menuBT" id="ao3" onclick="smoothScroll('veggieCon',300,3)">Vegetarian Corner</p>
+                            <p class="menuBT" id="ao4" onclick="smoothScroll('soupsand',300,4)">SOUPS & SIDE SALADS</p>
+                            <p class="menuBT" id="ao5" onclick="smoothScroll('childMen',300,5)">Children Menu</p>
+                            <p class="menuBT" id="ao6"onclick="smoothScroll('Desserts',300,6)">Desserts</p>
+                            <p class="menuBT" id="ao7" onclick="smoothScroll('drinkList',300,7)">Drinks List</p>
+                            <p class="menuBT" id="ao8"onclick="smoothScroll('alcoholicDr',300,8)">Alcoholic Drinks</p>
+                            <p class="menuBT" id="ao9" onclick="smoothScroll('cocktailser',300,9)">Cocktail</p>
+                            <p class="menuBT admin" id="ao10" onclick="smoothScroll('menuadmin',300,10)">Menu Updater</p>
                         </div>
                     </div>
+                </div>
+                <div id="checkOutpage" class="page " >
+                    <div class="holda">
+                        <div class="itemo0">
+                            <img src="">
+                            <p>Item</p>
+                            <p>Date</p>
+                            <p>QTY</p>
+                            <p>@</p>
+                            <p>STotal</p>
+                        </div>
+                        <div id="itemssl">
+                            
+                        </div>
+                        <div id="lissTotal">
+
+                        </div>
+                        <div class="mpesaform">
+                            <div class="card">
+                                <div class="inputs">
+                                    <label>Name</label>
+                                    <input type="text" class=""/>
+                                </div>
+                                <div class="inputs">
+                                    <label>Phone number</label>
+                                    <input type="number">
+                                </div>
+                                <div class="inputs">
+                                    <img src="./assets/1200px-M-PESA_LOGO-01.svg.png" alt="">
+                                    <div class="button" onclick="console.log('it works')">
+                                        Lipa na mpesa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bookingspage"class="page " >
+                    <div class="holda">
+                        <div class="mpesaform">
+                            <div class="card">
+                                <div class="img">
+                                    <img src="./assets/logo.png" alt="">
+                                    <p>Make a Booking</p>
+                                </div>
+                                <div class="inputs">
+                                    <label>Name</label>
+                                    <input type="text" id="bookingName" class=""/>
+                                </div>
+                                <div class="inputs">
+                                    <label>Phone number (254*********)</label>
+                                    <input type="number" id="bookingPhone">
+                                </div>
+                                <div class="inputs">
+                                    <label>Select Date</label>
+                                    <input type="date" id="boookingDate" onkeydown="return false" />
+                                </div>
+                                <div class="inputs">
+                                    <label>Select Time</label>
+                                    <input type="time" id="bookingTime"/>
+                                </div>
+                                <div class="inputs">
+                                    <label>Number of guests</label>
+                                    <input type="number" value="2" min="1" id="bookingGuest">
+                                </div>
+                                <div class="buttons" onclick="makeReserve()">
+                                    proceed 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="phonemenu">
+                <svg id="clicker" onclick="checked()" width="30" height="30" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="lineOne" d="M8.1447 2.5341H1.8033C1.34248 2.5341 0.968903 2.81992 0.968903 3.1725C0.968903 3.52508 1.34248 3.8109 1.8033 3.8109H8.1447C8.60553 3.8109 8.9791 3.52508 8.9791 3.1725C8.9791 2.81992 8.60553 2.5341 8.1447 2.5341Z" fill="#3E4095"/>
+                    <path id="lineTwo" d="M8.1447 4.6133H1.8033C1.34248 4.6133 0.968903 4.89912 0.968903 5.2517C0.968903 5.60428 1.34248 5.8901 1.8033 5.8901H8.1447C8.60553 5.8901 8.9791 5.60428 8.9791 5.2517C8.9791 4.89912 8.60553 4.6133 8.1447 4.6133Z" fill="#3E4095" />
+                    <path id="lineThree" d="M8.1447 6.6924H1.8033C1.34248 6.6924 0.968903 6.97822 0.968903 7.3308C0.968903 7.68338 1.34248 7.9692 1.8033 7.9692H8.1447C8.60553 7.9692 8.9791 7.68338 8.9791 7.3308C8.9791 6.97822 8.60553 6.6924 8.1447 6.6924Z" fill="#3E4095"/>
+                </svg>
+                <div id="stickOut">
+                    <p onclick="loadContent('home')" id="home" class="menuuus">Home</p>
+                    <p onclick="loadContent('islander')" id="islander" class="menuuus">Islander Bar & Grill</p>
+                    <p onclick="loadContent('spa')" id="spa" class="menuuus">Spa</p>
+                    <!-- <p onclick="loadContent('boatY')" id="boatY" class="menuuus">Boat & Yacht Pier</p>|
+                    <p onclick="loadContent('ecoCamp')" id="ecoCamp" class="menuuus">Eco camp</p>| -->
+                    <!-- <p class="menuuus">Gallary</p>| -->
+                    <p onclick="loadContent('foodMenu')" id="foodMenu" class="menuuus">Food</p>
+                    <p onclick="loadContent('bookings')" id="bookings" class="menuuus">Bookings</p>
+                    <p onclick="loadContent('eventsNews')" id="eventsNews" class="menuuus">News & Events</p>
+                    <p  class="menuuus" >Contacts</p>
+                    <p onclick="loadContent('admin')"  id="checkOut" class="menuuus">Admin login</p>
+                    <p onclick="loadContent('checkOut')"  class="menuuus">Check Out</p>
+                    
                 </div>
             </div>
             <div class="foooter">
@@ -583,7 +807,9 @@
                     <p>Mabuhay Islander Bar & Grill, Spa, Boat and Yacht Pier and Eco-lodge is the perfect family holiday chill spot, located within the scenic Kilifi Creek. We are located in Mandharini, along Majajani road, which is 7kms from the Kilifi-Malindi Highway. We have a water front beach bar, restaurant and lounge offering the most unique Asian-western fused cuisines. Our signature meal is the Mongolian Hot Pot whose base soup is basically prepared for 7 hours and served in a special cooking pot where clients choose what to cook and eat from a variety of exotic meat and vegetables. We also have an exclusive Spa with a Jacuzzi and different massage treatments by masseuses from Thailand. Our boat yard and yacht pier provide parking, servicing and repair services of boats. We offer different water sports such as Jet skiing and Kite surfing. Our eco-lodge is located on an island with the most amazing sunset view. Some of the activities available include: birdwatching, camping, kayaking, movies under the stars, romantic bonfire dinners and ocean swimming.  We also offer bookings for meetings, events, weddings, birthdays at very affordable rates. Mabuhay is the place to be if you want to experience an unforgettable mind-blowing experience.   </p>
                 </div>
                 <div class="contactss">
-
+                    <select name="" id="">
+                        <option></option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -596,4 +822,5 @@
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
     <script src="app.js"></script>
+    <script src="mpesa.js"></script>
 </html>
